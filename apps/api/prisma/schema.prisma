@@ -1,0 +1,14 @@
+// Nexvian database schema.
+// Domain models (Tenant, User, PaymentIntent, ...) are added from Sprint 1 onwards,
+// each change accompanied by a migration (`pnpm db:migrate`).
+
+generator client {
+  provider            = "prisma-client"
+  output              = "../src/generated/prisma"
+  moduleFormat        = "esm"
+  importFileExtension = "js"
+}
+
+datasource db {
+  provider = "postgresql"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "nexvian",
+  "private": true,
+  "packageManager": "pnpm@10.10.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "db:generate": "pnpm --filter @nexvian/api prisma:generate",
+    "db:migrate": "pnpm --filter @nexvian/api prisma:migrate",
+    "infra:up": "docker compose up -d",
+    "infra:down": "docker compose down"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.15.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.14.0",
+    "prettier": "^3.10.1",
+    "turbo": "^2.11.13",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.73.0"
+  }
+}
